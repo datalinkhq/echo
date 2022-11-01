@@ -1,0 +1,33 @@
+# Adapted from https://github.com/ZeppelinBot/Zeppelin/blob/master/docker-compose.development.yml
+
+version: '3'
+name: linkbot-dev
+services:
+  mysql:
+    image: planetscale/pscale
+    build:
+      context: "./export.sh"
+      args: ["pscale", "connect", "api", "bot", "--org", "datalink", "--service-token-id", $PSCALE_API_TOKEN_ID, "--service-token", $PSCALE_API_TOKEN]
+      network: host
+    command: |-
+      "pscale connect api"
+    working_dir: /app
+    healthcheck:
+      test: pscale --service-token-id $PSCALE_API_TOKEN_ID --service-token $PSCALE_API_TOKEN
+      timeout: 2m
+      retries: 2
+      start_period: 2m
+    volumes:
+      - .:/app
+
+  start_bot:
+    image: node
+    entrypoint: ["bash", "./entrypoint.sh"]
+    working_dir: /app
+    volumes:
+      - .:/app
+
+volumes:
+  .:
+    external: true
+

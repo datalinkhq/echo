@@ -1,0 +1,16 @@
+# Adapted from https://github.com/ZeppelinBot/Zeppelin/blob/master/docker-compose.production.yml
+
+version: '3'
+name: linkbot-prod
+services:
+  start_bot:
+    image: node
+    network_mode: host
+    entrypoint: ["bash", "./entrypoint.sh"]
+    working_dir: /app
+    volumes:
+      - .:/app
+
+volumes:
+  .:
+    external: true
