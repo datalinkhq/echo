@@ -1,7 +1,7 @@
 # Adapted from https://github.com/ZeppelinBot/Zeppelin/blob/master/docker-compose.production.yml
 
 version: '3'
-name: linkbot-prod
+name: echo-prod
 services:
   start_bot:
     image: node

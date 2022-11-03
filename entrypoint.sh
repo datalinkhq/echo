@@ -1,6 +1,6 @@
 corepack enable
 pnpm i
 cd /app
-pnpm build && pnpm generate
+pnpm run build && pnpm run generate
 
-pnpm start
+pnpm start:prod

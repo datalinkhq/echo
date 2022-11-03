@@ -1,13 +1,13 @@
 FROM node:latest
 
+COPY . /app
+
 WORKDIR /app
 
 RUN ["corepack", "enable"]
 
-RUN pnpm
-
 RUN ["pnpm", "i"]
 
-RUN ["pnpm", "build", "&&", "pnpm", "generate"]
+RUN ["pnpm", "run", "build"]
 
-ENTRYPOINT [ "pnpm", "start" ]
+ENTRYPOINT [ "pnpm", "start:prod" ]
