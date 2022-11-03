@@ -4,7 +4,7 @@
     "main": "dist/src/index.js",
     "private": true,
     "scripts": {
-        "start": "yarn generate && ts-node src/index.ts",
+        "start": "pnpm generate && ts-node src/index.ts",
         "start:dev": "ts-node-dev src/index.ts",
         "start:prod": "node dist/src/index.js",
         "generate": "prisma generate",
