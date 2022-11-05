@@ -11,9 +11,9 @@ This is the bot that datalink's Discord server uses- you can try it out for your
 Feel free to fork and modify echo, or even self-host it! Below are instructions on how to do this:
 
 ### Prerequisites:
-- Node.JS
-- PNPM/NPM/Yarn
-- Docker & Docker Compose (optional) 
+- [Node.JS](https://nodejs.org)
+- [PNPM/NPM/Yarn](https://nodejs.org/api/corepack.html)
+- [Docker & Docker Compose (optional)](https://docker.com)
 
 Initially, set up a MySQL Database, preferrably using [PlanetScale](https://planetscale.com). 
 Configure the `.env` file accordingly, an example is provided in [`.env.example`](https://github.com/datalinkhq/echo/blob/main/.env.example).
