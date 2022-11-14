@@ -1,7 +1,9 @@
 <div align="center"><img src="https://raw.githubusercontent.com/datalinkhq/datalink/main/assets/dark-wideshot.png#gh-dark-mode-only" width="50%" ></div>
 <div align="center"><img src="https://raw.githubusercontent.com/datalinkhq/datalink/main/assets/light-wideshot.png#gh-light-mode-only" width="50%" ></div>
-
 <h3 align="center">echo - Our homemade discord bot</h1>
+<div align="center">
+<a href=""> <img height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/compact/social/discord-plural_vector.svg" /> </a>
+</div>
 
 ## What is this?
 
